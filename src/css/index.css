@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+
+.theme-one {
+	/* backgrounds */
+	--bg-main-color: hsl(222, 26%, 31%);
+	--bg-toggle-color: hsl(223, 31%, 20%);
+	--bg-screen-color: hsl(224, 36%, 15%);
+
+	/* Keys */
+	--key-bg-clear: hsl(225, 21%, 49%);
+	--key-bg-clear-shadow: hsl(224, 28%, 35%);
+
+	--key-bg-equal: hsl(6, 63%, 50%);
+	--key-bg-equal-shadow: hsl(6, 70%, 34%);
+
+	--key-operator: hsl(30, 25%, 89%);
+	--key-operator-shadow: hsl(28, 16%, 65%);
+
+
+	/* Text */
+	--text-key: hsl(221, 14%, 31%);
+	--text-clear: hsl(0, 0, 100%);
+	--text-equal: hsl(0, 0, 100%);
+}
+
+.theme-two {
+	/* backgrounds */
+	--bg-main-color: hsl(0, 0%, 90%);
+	--bg-toggle-color: hsl(0, 5%, 81%);
+	--bg-screen-color: hsl(0, 0%, 93%);
+
+	/* Keys */
+	--key-bg-clear: hsl(185, 42%, 37%);
+	--key-bg-clear-shadow: hsl(185, 58%, 25%);
+
+	--key-bg-equal: hsl(25, 98%, 40%);
+	--key-bg-equal-shadow: hsl(25, 99%, 27%);
+
+	--key-operator: hsl(45, 7%, 89%);
+	--key-operator-shadow: hsl(35, 11%, 61%);
+
+
+	/* Text */
+	--text-key: hsl(60, 10%, 19%);
+	--text-clear: hsl(0, 0, 100%);
+	--text-equal: hsl(0, 0, 100%);
+}
+
+.theme-tree {
+	/* backgrounds */
+	--bg-main-color: hsl(268, 75%, 9%);
+	--bg-toggle-color: hsl(268, 71%, 12%);
+	--bg-screen-color: hsl(268, 71%, 12%);
+
+	/* Keys */
+	--key-bg-clear: hsl(281, 89%, 26%);
+	--key-bg-clear-shadow: hsl(285, 91%, 52%);
+
+	--key-bg-equal: hsl(176, 100%, 44%);
+	--key-bg-equal-shadow: hsl(177, 92%, 70%);
+
+	--key-operator: hsl(268, 47%, 21%);
+	--key-operator-shadow: hsl(290, 70%, 36%);
+
+
+	/* Text */
+	--text-key: hsl(52, 100%, 62%);
+	--text-clear: #ffffff;
+	--text-equal: hsl(198, 20%, 13%);
+}
+
+@tailwind utilities;
