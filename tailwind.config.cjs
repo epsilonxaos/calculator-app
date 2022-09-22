@@ -9,6 +9,7 @@ module.exports = {
 			"key": "var(--text-key)",
 			"clear": "var(--text-clear)",
 			"equal": "var(--text-equal)",
+			"white": "#ffffff",
 		},
 		backgroundColor: {
 			"main": "var(--bg-main-color)",
@@ -27,9 +28,9 @@ module.exports = {
 			"white": "#ffffff"
 		},
 		boxShadow: {
-			"key": "0px 4px 0px var(--key-operator-shadow)",
-			"equal": "0px 4px 0px var(--key-bg-equal-shadow)",
-			"clear": "0px 4px 0px var(--key-bg-clear-shadow)"
+			"key": "0px 3px 0px var(--key-operator-shadow)",
+			"equal": "0px 3px 0px var(--key-bg-equal-shadow)",
+			"clear": "0px 3px 0px var(--key-bg-clear-shadow)"
 		},
 		extend: {
 			fontFamily: {

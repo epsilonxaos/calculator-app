@@ -5,7 +5,6 @@ const Button = function(props) {
 		clear: ["bg-keyClear", "text-clear", "shadow-clear", ""],
 	}
 
-	console.log(colorClass[props.type][1])
 	return (
 		<input 
 			type="button" 
@@ -13,7 +12,6 @@ const Button = function(props) {
 			className={`
 				transition-all
 				w-full 
-				focus:bg-white 
 				font-bold 
 				rounded-xl 
 				h-[60px] 
