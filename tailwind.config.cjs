@@ -23,6 +23,8 @@ module.exports = {
 
 			"keyOperator": "var(--key-operator)",
 			"keyOperatorShadow": "var(--key-operator-shadow)",
+
+			"white": "#ffffff"
 		},
 		boxShadow: {
 			"key": "0px 4px 0px var(--key-operator-shadow)",

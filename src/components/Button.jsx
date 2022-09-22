@@ -1,6 +1,6 @@
 const Button = function(props) {
 	const colorClass = {
-		operator: ["bg-keyOperator", "text-key", "shadow-key", "active:bg-[#ffffff]"],
+		operator: ["bg-keyOperator", "text-key", "shadow-key", "active:bg-white"],
 		equal: ["bg-keyEqual", "text-equal", "shadow-equal", ""],
 		clear: ["bg-keyClear", "text-clear", "shadow-clear", ""],
 	}
