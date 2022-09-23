@@ -1,4 +1,4 @@
-const Button = function(props) {
+const Button = function({label, type, eventHandler}) {
 	const colorClass = {
 		operator: ["bg-keyOperator", "text-key", "shadow-key", "active:bg-white"],
 		equal: ["bg-keyEqual", "text-equal", "shadow-equal", ""],
@@ -8,7 +8,7 @@ const Button = function(props) {
 	return (
 		<input 
 			type="button" 
-			value={props.label} 
+			value={label} 
 			className={`
 				transition-all
 				w-full 
@@ -17,10 +17,11 @@ const Button = function(props) {
 				h-[60px] 
 				text-3xl 
 				cursor-pointer 
-				${colorClass[props.type][0]} 
-				${colorClass[props.type][1]} 
-				${colorClass[props.type][2]} 
-				${colorClass[props.type][3]}`} />
+				${colorClass[type][0]} 
+				${colorClass[type][1]} 
+				${colorClass[type][2]} 
+				${colorClass[type][3]}`} 
+			onClick={() => eventHandler(label)}/>
 	);
 }
 
