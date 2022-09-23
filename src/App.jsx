@@ -2,85 +2,65 @@ import { useState } from 'react';
 import Button from './components/Button';
 
 function App() {
-	const [status, setStatus] = useState({
-		operando: 0,
-		operador: 0,
-		display: 0,
-		resDis: false
-	});
-
-	const getInicialStatus = () => {
-		return {
-			operando: 0,
-			operador: 0,
-			display: 0,
-			resDis: false
-		}
-	}
+	const [operando, setOperando] = useState(0);
+	const [operador, setOperador] = useState(0);
+	const [display, setDisplay] = useState(0);
+	const [resDis, setResDis] = useState(false);
 
 	const onClickOperando = (label) => {
-		var statusActive = status;
-
-		if(statusActive.display == 0 || isNaN(statusActive.display) || statusActive.resDis) {
-			statusActive.resDis = false;
-			statusActive.display = label;
+		if(display == 0 || isNaN(display) || resDis) {
+			setDisplay(label);
+			setResDis(false);
 		} else {
-			statusActive.display = statusActive.display + label;
+			setDisplay(display + label);
 		}
-
-		console.log(statusActive);
-		setStatus(statusActive);
 	}
 
 	const onClickOperator = (label) => {
-		var statusActive = status;
-
-		if(status.operador.length > 0){
+		console.log(label);
+		if(operador.length > 0){
 			calculate();
 			if(label == '='){
-				statusActive.resDis   = true;
-				statusActive.operador = '';
+				setResDis(true);
+				setOperador('');
 			} else {
-				statusActive.resDis   = true;
-				statusActive.operador = label;
+				setResDis(true);
+				setOperador(label);
 			}
 		} else {
-			statusActive.operando = status.display;
-			statusActive.operador = label;
-			statusActive.display  = label;
+			setOperando(display);
+			setOperador(label);
+			setDisplay(label);
 		}
-
-		console.log('True')
-		setStatus(statusActive);
 	}
 
 	const onClickClean = () => {
-		setStatus(getInicialStatus());
+		setOperando(0);
+		setOperador(0);
+		setDisplay(0);
+		setResDis(false);
 	}
 
 	const calculate = () => {
 		var res;
-		var statusActive = status;
 
-		switch (statusActive.operador) {
+		switch (operador) {
 			case '+':
-				res = parseFloat(statusActive.operando) + parseFloat(statusActive.display);
+				res = parseFloat(operando) + parseFloat(display);
 				break;
 			case '-':
-				res = parseFloat(statusActive.operando) - parseFloat(statusActive.display);
+				res = parseFloat(operando) - parseFloat(display);
 				break;
 			case '/':
-				res = parseFloat(statusActive.operando) / parseFloat(statusActive.display);
+				res = parseFloat(operando) / parseFloat(display);
 				break;
 			case 'x':
-				res = parseFloat(statusActive.operando) * parseFloat(statusActive.display);
+				res = parseFloat(operando) * parseFloat(display);
 				break;
 		}
-		
-		statusActive.operando = res;
-		statusActive.display  = res;
 
-		setStatus(statusActive);
+		setOperando(res);
+		setDisplay(res);
 	}
 
 	return (
@@ -89,8 +69,7 @@ function App() {
 
 				{/* Screen */}
 				<div className="bg-screen text-[62px] text-white text-right px-[35px] py-[15px] mb-8 rounded-2xl">
-					{status.display}
-					{console.log(status)}
+					{display}
 				</div>
 
 				{/* Botones */}
