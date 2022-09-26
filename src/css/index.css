@@ -20,8 +20,9 @@
 
 	/* Text */
 	--text-key: hsl(221, 14%, 31%);
-	--text-clear: hsl(0, 0, 100%);
-	--text-equal: hsl(0, 0, 100%);
+	--text-clear: #ffffff;
+	--text-equal: #ffffff;
+	--texts: #ffffff;
 }
 
 .theme-two {
@@ -43,8 +44,9 @@
 
 	/* Text */
 	--text-key: hsl(60, 10%, 19%);
-	--text-clear: hsl(0, 0, 100%);
-	--text-equal: hsl(0, 0, 100%);
+	--text-clear: #ffffff;
+	--text-equal: #ffffff;
+	--texts: hsl(60, 10%, 19%);
 }
 
 .theme-tree {
@@ -68,6 +70,7 @@
 	--text-key: hsl(52, 100%, 62%);
 	--text-clear: #ffffff;
 	--text-equal: hsl(198, 20%, 13%);
+	--texts: hsl(52, 100%, 62%);
 }
 
 @tailwind utilities;

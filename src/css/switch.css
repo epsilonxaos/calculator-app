@@ -1,0 +1,72 @@
+.switch-field {
+	display: flex;
+	padding-top: 36px;
+	overflow: hidden;
+	position:relative;
+	width: 66px;
+}
+
+.switch-field input {
+	position: absolute !important;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	width: 1px;
+	border: 0;
+	overflow: hidden;
+}
+
+.switch-field label {
+	/* background-color: #e4e4e4; */
+	color: rgba(0, 0, 0, 0.6);
+	font-size: 14px;
+	line-height: 1;
+	text-align: center;
+	padding: 13px 11.5px;
+	margin-right: -1px;
+	transition: all 0.1s ease-in-out;
+	position: relative;
+}
+
+.switch-field label::after {
+	content: attr(data-title);
+	position: absolute;
+	top: -15px;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	font-weight: bold;
+}
+
+.switch-field label:hover {
+	cursor: pointer;
+}
+
+.switch-field input:checked + label {
+	box-shadow: none;
+}
+
+.switch-field input + label::before {
+	content: "";
+	width: 15px;
+	height: 15px;
+	border-radius: 100%;
+	box-shadow: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	transition: all 150ms ease-in;
+}
+
+.switch-field input:checked + label::before {
+	transform: translate(-50%, -50%) scale(1);
+}
+
+.switch-field label:first-of-type {
+	border-radius: 15px 0 0 15px;
+}
+
+.switch-field label:last-of-type {
+	border-radius: 0 15px 15px 0;
+}

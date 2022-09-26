@@ -10,6 +10,7 @@ module.exports = {
 			"clear": "var(--text-clear)",
 			"equal": "var(--text-equal)",
 			"white": "#ffffff",
+			"texts": "var(--texts)",
 		},
 		backgroundColor: {
 			"main": "var(--bg-main-color)",
