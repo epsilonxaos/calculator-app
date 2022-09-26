@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Button from './components/Button';
+import Switchs from './components/Switch';
 import './css/switch.css';
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
 	const [theme, setTheme] = useState('one');
 
 	const onChangeThemeHandler = (val) => {
+		console.log(val);
 		setTheme(val);
 	}
 
@@ -82,12 +84,9 @@ function App() {
 					<div className="flex items-end justify-end">
 						<h2 className="text-texts mr-6 text-sm ">THEME</h2>
 						<div className="switch-field">
-							<input type="radio" id="theme-1" name="theme" value="one" defaultChecked onChange={() => onChangeThemeHandler('one')} />
-							<label htmlFor="theme-1" className="after:text-texts bg-toggle before:bg-keyEqual" onChange={() => onChangeThemeHandler('one')} data-title="1"></label>
-							<input type="radio" id="theme-2" name="theme" value="two" onChange={() => onChangeThemeHandler('two')} />
-							<label htmlFor="theme-2" className="after:text-texts bg-toggle before:bg-keyEqual" onChange={() => onChangeThemeHandler('two')} data-title="2"></label>
-							<input type="radio" id="theme-3" name="theme" value="tree" onChange={() => onChangeThemeHandler('tree')} />
-							<label htmlFor="theme-3" className="after:text-texts bg-toggle before:bg-keyEqual" onChange={() => onChangeThemeHandler('tree')} data-title="3"></label>
+							<Switchs label={1} theme={'one'} eventHandler={onChangeThemeHandler} />
+							<Switchs label={2} theme={'two'} eventHandler={onChangeThemeHandler} />
+							<Switchs label={3} theme={'tree'} eventHandler={onChangeThemeHandler} />
 						</div>
 					</div>
 				</div>
