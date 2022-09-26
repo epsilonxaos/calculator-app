@@ -69,6 +69,10 @@ function App() {
 		setDisplay(res);
 	}
 
+	const onClickCleanDisplay = () => {
+		setDisplay(0);
+	}
+
 	return (
 		<main className={`h-screen flex items-center justify-center bg-main font-league theme-${theme}`}>
 			<div className="calculator max-w-[540px] w-full transition-all p-3">
@@ -99,7 +103,7 @@ function App() {
 						<Button label={'7'} type="operator" eventHandler={onClickOperando} />
 						<Button label={'8'} type="operator" eventHandler={onClickOperando} />
 						<Button label={'9'} type="operator" eventHandler={onClickOperando} />
-						<Button label={'DEL'} type="clear" />
+						<Button label={'DEL'} type="clear" eventHandler={onClickCleanDisplay} />
 					</div>
 					<div className="grid grid-cols-4 gap-3 sm:gap-6 mb-3 sm:mb-6">
 						<Button label={'4'} type="operator" eventHandler={onClickOperando} />
